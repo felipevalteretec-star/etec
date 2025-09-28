@@ -3,27 +3,41 @@
     grid-template-columns: 100%;
     grid-template-rows: 100%;
     box-sizing: border-box;
-    width: 100%;
 }
 
 #mainBlocoPrincipal {
     display: grid;
-    grid-template-columns: 30% 40% 30%;
+    grid-template-columns: 20% 60% 20%;
     grid-template-rows: 30% 70%;
 }
+
 
 #mainBlocoPrincipal #secaoBlocoPrincipal {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1 1 auto;
 }
 
+
+
+/* Posição ok */
 #mainBlocoPrincipal #tituloBlocoPrincipal {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "h1"
+                         "p";
 }
 
 #mainBlocoPrincipal #imgMediaBlocoPrincipal {
@@ -31,7 +45,6 @@
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
-
 }
 
 #mainBlocoPrincipal #conteudoPagina {
